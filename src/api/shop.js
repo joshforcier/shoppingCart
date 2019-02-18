@@ -1,8 +1,42 @@
-const _products = [
-    {"id": 1, "title": "iPad 4 Mini", "price": 500.01, "inventory": 2},
-    {"id": 2, "title": "H&M T-Shirt White", "price": 10.99, "inventory": 10},
-    {"id": 3, "title": "Charli XCX - Sucker CD", "price": 19.99, "inventory": 5}
-]
+const _products =
+    [
+        {
+            "id": 9,
+            "title": "MULTRON",
+            "price": "3289.38",
+            "inventory": 3
+        },
+        {
+            "id": 6,
+            "title": "DEVILTOE",
+            "price": "1984.81",
+            "inventory": 62
+        },
+        {
+            "id": 2,
+            "title": "ZENSUS",
+            "price": "1401.76",
+            "inventory": 33
+        },
+        {
+            "id": 4,
+            "title": "CENTREXIN",
+            "price": "2153.37",
+            "inventory": 7
+        },
+        {
+            "id": 2,
+            "title": "EXOZENT",
+            "price": "2959.47",
+            "inventory": 91
+        },
+        {
+            "id": 7,
+            "title": "ZENSOR",
+            "price": "3377.86",
+            "inventory": 41
+        }
+    ];
 
 export default {
     getProducts (cb) {

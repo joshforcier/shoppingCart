@@ -12,6 +12,8 @@
                     :disabled="!productIsInStock(product)"
                     @click="addProductToCart(product)">Add to cart
                 </button>
+                <div v-if="product.inventory > 0" class="stockStatus">In Stock</div>
+                <div v-if="product.inventory === 0" class="stockStatus">Out of Stock</div>
             </li>
         </ul>
     </div>
@@ -24,24 +26,25 @@
     export default {
         data () {
             return {
-                loading: false
+                loading: false,
+                productIndex: 1
             }
         },
 
         computed: {
             ...mapState({
-                products: state => state.products
+                products: state => state.products.items
             }),
 
-            ...mapGetters({
+            ...mapGetters('products', {
                 productIsInStock: 'productIsInStock'
             })
         },
 
         methods: {
             ...mapActions({
-                fetchProducts: 'fetchProducts',
-                addProductToCart: 'addProductToCart'
+                fetchProducts: 'products/fetchProducts',
+                addProductToCart: 'cart/addProductToCart'
             }),
         },
 
