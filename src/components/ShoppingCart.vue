@@ -12,8 +12,6 @@
                             <img src="http://lorempixel.com/output/technics-q-c-300-300-4.jpg" alt="" class="itemImg" />
                             <h3>{{product.title}}</h3>
                             <p> <input type="text"  class="qty" v-model="product.quantity"/>x {{product.price | currency}}</p>
-                            <p v-if="product.inventory > 0" class="stockStatus">In Stock</p>
-                            <p v-if="product.inventory === 0" class="stockStatus">Out of Stock</p>
                         </div>
 
                         <div class="prodTotal cartSection">
