@@ -1,4 +1,4 @@
-# shopping-cart
+![Alt text](static/images/cart.jpg)
 
 > A Vue.js project
 
